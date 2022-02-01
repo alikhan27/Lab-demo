@@ -1,2 +1,2 @@
 # Lab -Demo
-Basic concepts in data strrctures and solutions
+Basic concepts in data structures and solutions

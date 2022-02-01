@@ -1,4 +1,31 @@
 import { Stack } from './algo';
+/** Find Missing Brackets */
+function isBracketsBalanced(expr) {
+  let s = new Stack();
+  for (let i = 0; i < expr.length; i++) {
+    if (expr[i] === '[' || expr[i] === '{' || expr[i] === '(') {
+      s.push(expr[i]);
+      continue;
+    }
+    if (expr[i] === ']' || expr[i] === '}' || expr[i] === ')') {
+      let el = s.pop();
+      switch (expr[i]) {
+        case ']':
+          if (el == '{' || el == '(') return false;
+          break;
+        case '}':
+          if (el == '[' || el == '(') return false;
+          break;
+        case ')':
+          if (el == '{' || el == '[') return false;
+          break;
+      }
+    }
+  }
+  return s.len() == 0;
+}
+console.log(isBracketsBalanced('(a)[[]](bdfdf)(dfdf){[(dsfdsf)]}'));
+/** Find The Missing Brackets */
 
 /* Factorial  */
 function factorial(num) {
@@ -12,7 +39,7 @@ function factorial(num) {
   }
   return product;
 }
-console.log(factorial(5));
+//console.log(factorial(5));
 /* Factorial  */
 
 /* Palindrome  */

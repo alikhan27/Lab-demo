@@ -1,3 +1,2 @@
-# js-fuvc57
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-fuvc57)
+# Lab -Demo
+Basic concepts in data strrctures and solutions
